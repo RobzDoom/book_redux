@@ -1,3 +1,11 @@
+const BOOK_SELECTED = 'book_selected'
+
 export function selectBook(book){
-    console.log ('A book has been selected:', book.title)
+    //This is an action creator, it needs to return an action,
+    //This object has a type property
+    return{
+        type: BOOK_SELECTED,
+        payload: book
+
+    }
 }

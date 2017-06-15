@@ -13,9 +13,7 @@ class BookList extends Component{
             key= {book.title} 
             onClick ={()=> this.props.selectBook(book)} 
             >
-                
-                {book.title}
-                
+                {book.title}   
             </li>
             )
         })
@@ -43,4 +41,4 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({selectBook: selectBook}, dispatch)
 }
 //Promote BookList from component to container - it needs to know about dispatch Method. 
-export default connect (mapStateToprops)(BookList)
+export default connect (mapStateToprops, mapDispatchToProps)(BookList)
